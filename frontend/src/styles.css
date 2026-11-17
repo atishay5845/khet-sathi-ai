@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-synthesis: none; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f5f7f2; color: #17251c; font-family: 'DM Sans', sans-serif; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+::selection { background: #cfe4d1; color: #1a3626; }
+
+@layer components {
+  .card { @apply rounded-2xl border border-[#e7ece5] bg-white shadow-card; }
+  .eyebrow { @apply text-[10px] font-bold uppercase tracking-[.16em] text-[#849187]; }
+  .page-title { @apply font-display text-[28px] font-extrabold tracking-[-.045em] text-ink sm:text-[32px]; }
+  .page-subtitle { @apply mt-1 text-[13px] leading-6 text-[#7a887e]; }
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-xl bg-forest-700 px-4 py-2.5 text-[13px] font-bold text-white shadow-sm transition hover:bg-forest-800 active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-60; }
+  .btn-secondary { @apply inline-flex items-center justify-center gap-2 rounded-xl border border-[#e3e9e1] bg-white px-4 py-2.5 text-[13px] font-semibold text-[#425147] transition hover:border-[#bdcfbf] hover:bg-[#f9fbf8]; }
+  .input-label { @apply mb-2 block text-[12px] font-bold text-[#46564a]; }
+  .field { @apply w-full rounded-xl border border-[#e4eae2] bg-[#fbfcfa] px-3.5 py-3 text-[13px] text-[#25362a] outline-none transition placeholder:text-[#a3ada5] focus:border-forest-400 focus:bg-white focus:ring-4 focus:ring-forest-50; }
+}
+
+.sidebar-scroll::-webkit-scrollbar { width: 4px; }
+.sidebar-scroll::-webkit-scrollbar-thumb { background: #dfe7de; border-radius: 8px; }
+.chart-grid line { stroke: #edf1eb; }
+.recharts-tooltip-wrapper { outline: none; }
+.recharts-default-tooltip { border: 1px solid #e6ece5 !important; border-radius: 12px !important; box-shadow: 0 10px 30px rgba(20,40,24,.08) !important; }
+.animate-in { animation: rise .45s ease both; }
+.animate-delay-1 { animation-delay: .06s; }
+.animate-delay-2 { animation-delay: .12s; }
+.animate-delay-3 { animation-delay: .18s; }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 767px) { .mobile-safe { padding-bottom: 84px; } }

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+*.db
+backend/.chroma/
+backend/khetsathi.db
+backend/.pytest_cache/
+backend/.sentence_transformers/
+.DS_Store
